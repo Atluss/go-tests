@@ -8,7 +8,8 @@ import (
 
 func main() {
 
-	fileUrl := "https://golangcode.com/images/avatar.jpg"
+	// fileUrl := "https://golangcode.com/images/avatar.jpg"
+	fileUrl := "https://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png"
 
 	err := DownloadFile("avatar.jpg", fileUrl)
 	if err != nil {
