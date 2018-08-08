@@ -17,9 +17,7 @@ func main() {
 	// c := Circle{0.0, 0.1, 5.0}
 
 	c := new(Circle)
-
 	c.x = 5.0
-
 	fmt.Println(c.area())
 
 }
