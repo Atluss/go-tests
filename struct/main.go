@@ -2,14 +2,16 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
+// Circle is a struct
 type Circle struct {
 	x, y, r float64
 }
 
 func (c *Circle) area() float64 {
-	return c.x * c.x
+	return math.Pi * c.x * c.x
 }
 
 func main() {
@@ -19,5 +21,8 @@ func main() {
 	c := new(Circle)
 	c.x = 5.0
 	fmt.Println(c.area())
+
+	setMap()
+	printMap()
 
 }
