@@ -7,8 +7,8 @@ import (
 
 // тестовая структура
 type objStruct struct {
-	X, Y float64
-	Name string `json:"structName"`
+	X, Y float64 // координаты
+	Name string  `json:"structName"` // имя
 }
 
 // передвижение объекта
