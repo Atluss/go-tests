@@ -1,3 +1,5 @@
+package time_t
+
 import (
 	"strings"
 	"time"

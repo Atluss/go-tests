@@ -9,8 +9,7 @@ func main() {
 		"not Here", "again not", "three not"}
 	summer := arMount[5:8]
 	endSummber := summer[len(summer)-1:]
-	endSummber[0] = "NEW"
-	copy(summer, []string{"123", "321"})
+	copy(summer, []string{"123", "321", "NEW", "23"})
 
 	fmt.Println("Mounts: ", arMount, len(arMount), cap(arMount))
 	fmt.Println("Summer: ", summer, len(summer), cap(summer))
