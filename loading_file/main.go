@@ -7,8 +7,6 @@ import (
 )
 
 func main() {
-
-	// fileUrl := "https://golangcode.com/images/avatar.jpg"
 	fileUrl := "https://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png"
 
 	err := DownloadFile("avatar.jpg", fileUrl)
@@ -21,7 +19,6 @@ func main() {
 // DownloadFile will download a url to a local file. It's efficient because it will
 // write as it downloads and not load the whole file into memory.
 func DownloadFile(filepath string, url string) error {
-
 	// Create the file
 	out, err := os.Create(filepath)
 	if err != nil {
@@ -41,6 +38,5 @@ func DownloadFile(filepath string, url string) error {
 	if err != nil {
 		return err
 	}
-
 	return nil
 }

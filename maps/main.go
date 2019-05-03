@@ -6,48 +6,21 @@ import (
 
 func main() {
 	elements := map[string]map[string]map[string]string{
-		"H": map[string]string{
-			"name": map[string]string{
-				"test": "123",
+		"Helium": {
+			"gas": {
+				"A": "asd",
 			},
-			// "state": "gas",
 		},
-		/*"He": map[string]string{
-			"name":  "Helium",
-			"state": "gas",
+		"Lithium": {
+			"solid": {
+				"A": "asd",
+			},
 		},
-		"Li": map[string]string{
-			"name":  "Lithium",
-			"state": "solid",
+		"Beryllium": {
+			"solid": {
+				"A": "asd",
+			},
 		},
-		"Be": map[string]string{
-			"name":  "Beryllium",
-			"state": "solid",
-		},
-		"B": map[string]string{
-			"name":  "Boron",
-			"state": "solid",
-		},
-		"C": map[string]string{
-			"name":  "Carbon",
-			"state": "solid",
-		},
-		"N": map[string]string{
-			"name":  "Nitrogen",
-			"state": "gas",
-		},
-		"O": map[string]string{
-			"name":  "Oxygen",
-			"state": "gas",
-		},
-		"F": map[string]string{
-			"name":  "Fluorine",
-			"state": "gas",
-		},
-		"Ne": map[string]string{
-			"name":  "Neon",
-			"state": "gas",
-		},*/
 	}
 
 	if el, ok := elements["Li"]; ok {

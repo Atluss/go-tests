@@ -1,3 +1,4 @@
+// simple counter
 package main
 
 import (
