@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+)
 
 func main() {
 	var arMount = [...]string{
@@ -15,4 +18,7 @@ func main() {
 	fmt.Println("Summer: ", summer, len(summer), cap(summer))
 	fmt.Println("End summer: ", endSummber, len(endSummber), cap(endSummber))
 	fmt.Println(arMount[1:4], summer, endSummber, len(arMount))
+	for range arMount {
+		log.Printf("amm")
+	}
 }
