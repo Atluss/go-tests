@@ -1,10 +1,11 @@
-package main
+package maps
 
 import (
 	"fmt"
+	"testing"
 )
 
-func main() {
+func TestMapMap(t *testing.T) {
 	elements := map[string]map[string]map[string]string{
 		"Helium": {
 			"gas": {

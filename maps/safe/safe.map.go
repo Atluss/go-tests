@@ -1,5 +1,5 @@
 // example from book
-package main
+package safe
 
 type safeMap chan commandData
 
