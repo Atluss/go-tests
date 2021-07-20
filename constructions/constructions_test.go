@@ -44,3 +44,16 @@ func TestHigherOrderFunc(t *testing.T) {
 		sliceIndex(len(ys), func(i int) bool { return ys[i] == "A" }),
 	)
 }
+
+// TestOuter out by GOTO
+func TestOuter(t *testing.T) {
+outer:
+	for i := 0; i < 3; i++ {
+		for j := 0; j < 3; j++ {
+			print(i, ",", j, " ")
+			break outer
+		}
+		println()
+	}
+	fmt.Println("DONE")
+}

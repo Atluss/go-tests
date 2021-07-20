@@ -36,7 +36,6 @@ func (obj objStruct) toJSON() string {
 }
 
 func main() {
-
 	mover := objStruct{X: 10.0, Y: 10.0}
 
 	mover.Name = "Jack"

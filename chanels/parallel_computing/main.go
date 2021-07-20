@@ -7,15 +7,12 @@ import (
 )
 
 func main() {
-
 	sums := []uint{1, 2, 4, 6, 6}
 
 	log.Println(multiCalc(sums))
-
 }
 
 func multiCalc(sumc []uint) (total uint) {
-
 	sizes := make(chan uint)
 	var wg sync.WaitGroup
 

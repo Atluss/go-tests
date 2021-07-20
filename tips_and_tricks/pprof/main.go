@@ -4,9 +4,10 @@ package main
 
 import (
 	"fmt"
-	"go-sandbox/algorithms/sort"
 	"os"
 	"runtime/pprof"
+
+	"go-sandbox/algorithms/sort"
 )
 
 func main() {
@@ -39,6 +40,6 @@ func main() {
 
 	sortPast := make([]int, len(array), cap(array))
 	copy(sortPast, array)
-	sort.PastSort(sortPast)
+	sort.InsertSort(sortPast)
 	fmt.Printf("%+v\n", sortPast)
 }

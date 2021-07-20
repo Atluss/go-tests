@@ -57,10 +57,7 @@ func plotData(path string, xys plotter.XYs) error {
 		return fmt.Errorf("could not create %s: %v", path, err)
 	}
 
-	p, err := plot.New()
-	if err != nil {
-		return fmt.Errorf("could not create plot: %v", err)
-	}
+	p := plot.New()
 
 	// create scatter with all data points
 	s, err := plotter.NewScatter(xys)

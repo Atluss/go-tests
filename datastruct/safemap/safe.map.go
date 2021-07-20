@@ -1,5 +1,5 @@
-// example from book
-package safe
+// Package safemap example from book
+package safemap
 
 type safeMap chan commandData
 
@@ -89,12 +89,12 @@ func (sm safeMap) Len() int {
 	return (<-reply).(int)
 }
 
-// If the updater calls a safeMap method we will get deadlock!
+// Update If the updater calls a safeMap method we will get deadlock!
 func (sm safeMap) Update(key string, updater UpdateFunc) {
 	sm <- commandData{action: update, key: key, updater: updater}
 }
 
-// Close() may only be called once per safe map; all other methods can be
+// Close may only be called once per safe map; all other methods can be
 // called as often as desired from any number of goroutines
 func (sm safeMap) Close() map[string]interface{} {
 	reply := make(chan map[string]interface{})

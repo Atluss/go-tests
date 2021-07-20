@@ -14,8 +14,8 @@ func main() {
 
 	value := reflect.ValueOf(&number)
 	fmt.Printf("Type: %v Val: %+v\n", reflect.TypeOf(number), value.Elem())
-	pointee := value.Elem()
-	pointee.SetInt(3) // OK. Значение, на которое ссылается указатель, заменить можно.
+	ptr := value.Elem()
+	ptr.SetInt(3) // OK. Значение, на которое ссылается указатель, заменить можно.
 
 	fmt.Printf("After change: %d\n", number)
 	fmt.Println("----SELECT---")

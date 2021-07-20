@@ -4,7 +4,6 @@ package main
 import "fmt"
 
 func main() {
-
 	strs := []string{"one", "two", "three", "four"}
 	var err error
 
@@ -19,7 +18,6 @@ func main() {
 }
 
 func doSomething(strs []string) (nstr []string, err error) {
-
 	type item struct {
 		mes string
 		err error

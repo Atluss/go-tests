@@ -7,7 +7,6 @@ import (
 )
 
 func worker(done chan struct{}, wg *sync.WaitGroup) {
-
 	defer wg.Done()
 
 	select {

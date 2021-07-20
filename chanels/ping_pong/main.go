@@ -26,7 +26,9 @@ func printer(c chan string) {
 	}
 }
 func main() {
-	var c chan string = make(chan string)
+	var c = make(chan string)
+
+	fmt.Println(len(c))
 
 	go pinger(c)
 	go printer(c)

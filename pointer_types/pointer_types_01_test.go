@@ -66,3 +66,18 @@ func TestSlice1(t *testing.T) {
 	fmt.Printf(patternStrAppend, len(**s3), s3)
 
 }
+
+func TestMap1(t *testing.T) {
+	m := make(map[int]int)
+	m[1] = 1
+	fmt.Println(m)
+
+	var m2 map[int]int
+	m2 = map[int]int{}
+	m2[1] = 1
+	fmt.Println(m2)
+
+	m3 := new(map[int]int)
+	*m3 = map[int]int{1: 1}
+	fmt.Println(*m3)
+}

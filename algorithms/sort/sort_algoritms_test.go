@@ -42,7 +42,7 @@ func TestSelectionSort(t *testing.T) {
 
 	for i := 0; i < len(testAsc); i++ {
 		if sortAr[i] != testAsc[i] {
-			t.Errorf(`sortAr (%d) != testAsc (%d)`, sortAr[i], testAsc[i])
+			t.Errorf(`%d - sortAr (%d) != testAsc (%d)`, i, sortAr[i], testAsc[i])
 		}
 	}
 }
@@ -52,7 +52,7 @@ func TestPastSort(t *testing.T) {
 	sortAr := make([]int, len(testSlice), cap(testSlice))
 	copy(sortAr, testSlice)
 
-	sortAr = PastSort(testSlice)
+	sortAr = InsertSort(testSlice)
 	fmt.Printf("%+v\n", sortAr)
 
 	if len(sortAr) != len(testSlice) {
@@ -61,7 +61,25 @@ func TestPastSort(t *testing.T) {
 
 	for i := 0; i < len(testAsc); i++ {
 		if sortAr[i] != testAsc[i] {
-			t.Errorf(`sortAr (%d) != testAsc (%d)`, sortAr[i], testAsc[i])
+			t.Errorf(`%d - sortAr (%d) != testAsc (%d)`, i, sortAr[i], testAsc[i])
+		}
+	}
+}
+
+func TestMergeSort(t *testing.T) {
+	sortAr := make([]int, len(testSlice), cap(testSlice))
+	copy(sortAr, testSlice)
+
+	sortAr = MergeSort(testSlice)
+	fmt.Printf("%+v\n", sortAr)
+
+	if len(sortAr) != len(testSlice) {
+		t.Error(`len(sortAr) != len(testAsc)`)
+	}
+
+	for i := 0; i < len(testAsc); i++ {
+		if sortAr[i] != testAsc[i] {
+			t.Errorf(`%d - sortAr (%d) != testAsc (%d)`, i, sortAr[i], testAsc[i])
 		}
 	}
 }
@@ -92,7 +110,7 @@ func benchmarkPastSort(b *testing.B, arr []int) {
 
 	for i := 0; i < b.N; i++ {
 		copy(sortAr, arr)
-		PastSort(sortAr)
+		InsertSort(sortAr)
 	}
 }
 

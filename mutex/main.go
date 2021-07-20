@@ -33,7 +33,6 @@ func main() {
 		go func() {
 			total := 0
 			for {
-
 				// For each read we pick a key to access,
 				// `Lock()` the `mutex` to ensure
 				// exclusive access to the `state`, read
